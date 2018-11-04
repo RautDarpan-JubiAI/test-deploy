@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -e$'\r'
+set -e
 
 ### Configuration ###
 
@@ -9,13 +9,9 @@ APP_NAME=test-app
 APP_START_FILENAME=index.js
 RESTART_ARGS=
 
-# Uncomment and modify the following if you installed Passenger from tarball
-#export PATH=/path-to-passenger/bin:$PATH
-
-
 ### Automation steps ###
 
-# set -x$'\r'
+set -x
 
 # Pull latest code
 if [[ -e $APP_DIR ]]; then
