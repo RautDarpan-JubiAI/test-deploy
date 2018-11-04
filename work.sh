@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -e$'\r'
 
 ### Configuration ###
 
@@ -15,7 +15,7 @@ RESTART_ARGS=
 
 ### Automation steps ###
 
-set -x
+set -x$'\r'
 
 # Pull latest code
 if [[ -e $APP_DIR ]]; then
