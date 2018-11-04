@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-
 ### Configuration ###
 
 APP_DIR=/var/www/app
