@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+
 ### Configuration ###
 
 SERVER=ubuntu@129.213.21.4
