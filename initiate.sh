@@ -19,7 +19,14 @@ function run()
 
 
 ### Automation steps ###
-run scp $KEYARG ./work.sh $SERVER:$REMOTE_SCRIPT_PATH
+
+if [[ "$KEYFILE" != "" ]]; then
+  KEYARG="-i $KEYFILE"
+else
+  KEYARG=
+fi
+
+run scp -i id_rsa ./work.sh $SERVER:$REMOTE_SCRIPT_PATH
 echo
 echo "---- Running deployment script on remote server ----"
-run ssh -i $KEYARG $SERVER bash $REMOTE_SCRIPT_PATH
+run ssh -i id_rsa $SERVER bash $REMOTE_SCRIPT_PATH

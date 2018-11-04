@@ -18,14 +18,14 @@ RESTART_ARGS=
 set -x
 
 # Pull latest code
-if [[ -e $APP_DIR/code ]]; then
-  cd $APP_DIR/code
+if [[ -e $APP_DIR ]]; then
+  cd $APP_DIR
   git pull
   # Restart app
   sudo pm2 restart 
 else
-  git clone $GIT_URL $APP_DIR/code
-  cd $APP_DIR/code
+  git clone $GIT_URL 
+  cd $APP_DIR
   sudo pm2 start $APP_START_FILENAME --name $APP_NAME
 fi
 
